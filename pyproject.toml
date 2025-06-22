@@ -17,3 +17,9 @@ lint = [
 test = [
     "pytest>=8.4.1",
 ]
+
+[[tool.uv.index]]
+name = "test-pypi"
+url = "https://test.pypi.org/simple/"
+publish-url = "https://test.pypi.org/legacy/"
+explicit = false

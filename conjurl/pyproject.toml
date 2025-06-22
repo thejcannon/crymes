@@ -3,7 +3,7 @@ name = "conjurl"
 version = "0.1.0.dev0"
 description = "Conjurl is a Python crime which is meant to allow importing from various URLs (and URIs)."
 readme = "README.md"
-license = { file = "../LICENSE" }
+license = { file = "LICENSE" }
 authors = [
     { name = "Joshua Cannon", email = "thejcannon@gmail.com" }
 ]
