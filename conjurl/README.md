@@ -7,3 +7,10 @@ from conjurl.github.com.encode import httpx
 # or
 import conjurl.github.com.encode.httpx as httpx
 ```
+
+Alternatively...
+```py
+from conjurl import github
+
+httpx = github.com / "encode" / "httpx"
+```
