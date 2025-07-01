@@ -14,3 +14,10 @@ from conjurl import github
 
 httpx = github.com / "encode" / "httpx"
 ```
+
+or even...
+```py
+import importlib
+
+httpx = importlib.import_module("https://github.com/encode/httpx")
+```

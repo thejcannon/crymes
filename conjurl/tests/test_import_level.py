@@ -3,3 +3,4 @@ def test_httpx():
 
     # @TODO: Maybe a better assertion?
     assert httpx
+    print(httpx.get("https://google.com"))

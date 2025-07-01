@@ -48,6 +48,14 @@ class _MPF(importlib.abc.MetaPathFinder):
     def find_spec(self, fullname, path, target=None):
         logger.debug(f"_MPF: Looking for spec for {fullname}")
 
+        if fullname == "https://github":
+            return self._make_namespace_package(fullname)
+
+        if fullname.startswith("https://github.com"):
+            owner, repo = fullname.split("/")[-2:]
+            _download_and_install(owner, repo)
+            return importlib.util.find_spec(repo)
+
         if not fullname.startswith("conjurl."):
             return None
 
