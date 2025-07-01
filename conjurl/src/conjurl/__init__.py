@@ -66,11 +66,9 @@ class GitHubDotCom(types.ModuleType):
             self.owner = owner
 
         def __truediv__(self, repo: str):
-            # @TODO: Download/install then import then return
-            # @TODO: Maybe scrub from `sys.modules`?
-            return object()
+            _download_and_install(self.owner, repo)
+            return importlib.util.find_spec(repo)
 
-        # @TODO: See if we can add `@` for ref?
 
     def __truediv__(self, owner: str):
         return GitHubDotCom.GitHubOwner(owner)

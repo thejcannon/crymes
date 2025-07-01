@@ -3,20 +3,20 @@ members = ["conjurl"]
 
 [dependency-groups]
 dev = [
-    {include-group = "lint"},
-    {include-group = "format"},
-    {include-group = "test"},
+    { include-group = "lint" },
+    { include-group = "format" },
+    { include-group = "test" },
     "lefthook>=1.11.14",
 ]
-format = [
-    "ruff>=0.12.0",
-]
-lint = [
-    "ruff>=0.12.0",
-]
-test = [
-    "pytest>=8.4.1",
-]
+format = ["ruff>=0.12.0"]
+lint = ["ruff>=0.12.0"]
+test = ["pytest>=8.4.1"]
+
+[[tool.uv.index]]
+name = "pypi"
+url = "https://pypi.org/simple/"
+publish-url = "https://pypi.org/legacy/"
+explicit = false
 
 [[tool.uv.index]]
 name = "test-pypi"
